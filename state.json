@@ -1,0 +1,369 @@
+{
+  "matches": {},
+  "fixtures": {
+    "at": "2026-10-21T16:36:08.785912+01:00",
+    "date": "2026-10-21",
+    "rows": [
+      {
+        "id": "582178",
+        "date": "2026-08-10",
+        "time": null,
+        "url": "https://www.footballwebpages.co.uk/match/2026-2027/northern-premier-league--midlands-division/coleshill-town/bedworth-united/582178",
+        "title": "Coleshill Town 0-1 Bedworth United",
+        "listing": "(0)0 - 1(0)"
+      },
+      {
+        "id": "582188",
+        "date": "2026-08-15",
+        "time": null,
+        "url": "https://www.footballwebpages.co.uk/match/2026-2027/northern-premier-league--midlands-division/afc-rushden-and-diamonds/coleshill-town/582188",
+        "title": "AFC Rushden & Diamonds 0-0 Coleshill Town",
+        "listing": "(0)0 - 0(0)"
+      },
+      {
+        "id": "582203",
+        "date": "2026-08-18",
+        "time": null,
+        "url": "https://www.footballwebpages.co.uk/match/2026-2027/northern-premier-league--midlands-division/carlton-town/coleshill-town/582203",
+        "title": "Carlton Town 1-0 Coleshill Town",
+        "listing": "(0)0 - 1(0)"
+      },
+      {
+        "id": "590434",
+        "date": "2026-08-22",
+        "time": null,
+        "url": "https://www.footballwebpages.co.uk/match/2026-2027/emirates-fa-cup/coleshill-town/knowle/590434",
+        "title": "Coleshill Town 0-1 Knowle",
+        "listing": "(0)0 - 1(1)"
+      },
+      {
+        "id": "582223",
+        "date": "2026-08-25",
+        "time": null,
+        "url": "https://www.footballwebpages.co.uk/match/2026-2027/northern-premier-league--midlands-division/nuneaton-town/coleshill-town/582223",
+        "title": "Nuneaton Town 3-2 Coleshill Town",
+        "listing": "(0)2 - 3(0)"
+      },
+      {
+        "id": "571766",
+        "date": "2026-08-29",
+        "time": null,
+        "url": "https://www.footballwebpages.co.uk/match/2026-2027/fa-trophy/hanley-town/coleshill-town/571766",
+        "title": "Hanley Town 2-0 Coleshill Town",
+        "listing": "0 - 2"
+      },
+      {
+        "id": "582230",
+        "date": "2026-08-31",
+        "time": null,
+        "url": "https://www.footballwebpages.co.uk/match/2026-2027/northern-premier-league--midlands-division/coleshill-town/boldmere-st-michaels/582230",
+        "title": "Coleshill Town 3-3 Boldmere St Michaels",
+        "listing": "(2)3 - 3(2)"
+      },
+      {
+        "id": "582247",
+        "date": "2026-09-05",
+        "time": null,
+        "url": "https://www.footballwebpages.co.uk/match/2026-2027/northern-premier-league--midlands-division/st-ives-town/coleshill-town/582247",
+        "title": "St Ives Town 1-4 Coleshill Town",
+        "listing": "(3)4 - 1(1)"
+      },
+      {
+        "id": "582252",
+        "date": "2026-09-12",
+        "time": null,
+        "url": "https://www.footballwebpages.co.uk/match/2026-2027/northern-premier-league--midlands-division/coleshill-town/rugby-borough/582252",
+        "title": "Coleshill Town 1-3 Rugby Borough",
+        "listing": "(0)1 - 3(1)"
+      },
+      {
+        "id": "582267",
+        "date": "2026-09-15",
+        "time": null,
+        "url": "https://www.footballwebpages.co.uk/match/2026-2027/northern-premier-league--midlands-division/mickleover/coleshill-town/582267",
+        "title": "Mickleover 1-1 Coleshill Town",
+        "listing": "(1)1 - 1(0)"
+      },
+      {
+        "id": "582270",
+        "date": "2026-09-19",
+        "time": null,
+        "url": "https://www.footballwebpages.co.uk/match/2026-2027/northern-premier-league--midlands-division/coleshill-town/bourne-town/582270",
+        "title": "Coleshill Town 1-0 Bourne Town",
+        "listing": "(0)1 - 0(0)"
+      },
+      {
+        "id": "582280",
+        "date": "2026-09-21",
+        "time": null,
+        "url": "https://www.footballwebpages.co.uk/match/2026-2027/northern-premier-league--midlands-division/coleshill-town/sutton-coldfield-town/582280",
+        "title": "Coleshill Town 0-2 Sutton Coldfield Town",
+        "listing": "(0)0 - 2(1)"
+      },
+      {
+        "id": "582289",
+        "date": "2026-09-26",
+        "time": null,
+        "url": "https://www.footballwebpages.co.uk/match/2026-2027/northern-premier-league--midlands-division/boston-town/coleshill-town/582289",
+        "title": "Boston Town 2-2 Coleshill Town",
+        "listing": "(0)2 - 2(0)"
+      },
+      {
+        "id": "582295",
+        "date": "2026-09-28",
+        "time": null,
+        "url": "https://www.footballwebpages.co.uk/match/2026-2027/northern-premier-league--midlands-division/coleshill-town/belper-town/582295",
+        "title": "Coleshill Town 1-1 Belper Town",
+        "listing": "(1)1 - 1(1)"
+      },
+      {
+        "id": "582314",
+        "date": "2026-10-03",
+        "time": null,
+        "url": "https://www.footballwebpages.co.uk/match/2026-2027/northern-premier-league--midlands-division/grantham-town/coleshill-town/582314",
+        "title": "Grantham Town 2-3 Coleshill Town",
+        "listing": "(1)3 - 2(0)"
+      },
+      {
+        "id": "582318",
+        "date": "2026-10-10",
+        "time": null,
+        "url": "https://www.footballwebpages.co.uk/match/2026-2027/northern-premier-league--midlands-division/coleshill-town/basford-united/582318",
+        "title": "Coleshill Town 4-2 Basford United",
+        "listing": "(3)4 - 2(1)"
+      },
+      {
+        "id": "582331",
+        "date": "2026-10-17",
+        "time": null,
+        "url": "https://www.footballwebpages.co.uk/match/2026-2027/northern-premier-league--midlands-division/coleshill-town/shepshed-dynamo/582331",
+        "title": "Coleshill Town 1-5 Shepshed Dynamo",
+        "listing": "(0)1 - 5(3)"
+      },
+      {
+        "id": "582350",
+        "date": "2026-10-24",
+        "time": "15:00:00",
+        "url": "https://www.footballwebpages.co.uk/match/2026-2027/northern-premier-league--midlands-division/wellingborough-town/coleshill-town/582350",
+        "title": "Wellingborough Town v Coleshill Town",
+        "listing": "3pm"
+      },
+      {
+        "id": "595812",
+        "date": "2026-10-27",
+        "time": "19:45:00",
+        "url": "https://www.footballwebpages.co.uk/match/2026-2027/walsall-senior-cup/chasetown/coleshill-town/595812",
+        "title": "Chasetown v Coleshill Town",
+        "listing": "7.45pm"
+      },
+      {
+        "id": "582351",
+        "date": "2026-10-31",
+        "time": "15:00:00",
+        "url": "https://www.footballwebpages.co.uk/match/2026-2027/northern-premier-league--midlands-division/barwell/coleshill-town/582351",
+        "title": "Barwell v Coleshill Town",
+        "listing": "3pm"
+      },
+      {
+        "id": "582366",
+        "date": "2026-11-07",
+        "time": "15:00:00",
+        "url": "https://www.footballwebpages.co.uk/match/2026-2027/northern-premier-league--midlands-division/coleshill-town/corby-town/582366",
+        "title": "Coleshill Town v Corby Town",
+        "listing": "3pm"
+      },
+      {
+        "id": "582375",
+        "date": "2026-11-14",
+        "time": "15:00:00",
+        "url": "https://www.footballwebpages.co.uk/match/2026-2027/northern-premier-league--midlands-division/coleshill-town/long-eaton-united/582375",
+        "title": "Coleshill Town v Long Eaton United",
+        "listing": "3pm"
+      },
+      {
+        "id": "582386",
+        "date": "2026-11-21",
+        "time": "15:00:00",
+        "url": "https://www.footballwebpages.co.uk/match/2026-2027/northern-premier-league--midlands-division/bedworth-united/coleshill-town/582386",
+        "title": "Bedworth United v Coleshill Town",
+        "listing": "3pm"
+      },
+      {
+        "id": "582397",
+        "date": "2026-11-28",
+        "time": "15:00:00",
+        "url": "https://www.footballwebpages.co.uk/match/2026-2027/northern-premier-league--midlands-division/coleshill-town/afc-rushden-and-diamonds/582397",
+        "title": "Coleshill Town v AFC Rushden & Diamonds",
+        "listing": "3pm"
+      },
+      {
+        "id": "582416",
+        "date": "2026-12-05",
+        "time": "15:00:00",
+        "url": "https://www.footballwebpages.co.uk/match/2026-2027/northern-premier-league--midlands-division/sutton-coldfield-town/coleshill-town/582416",
+        "title": "Sutton Coldfield Town v Coleshill Town",
+        "listing": "3pm"
+      },
+      {
+        "id": "582421",
+        "date": "2026-12-12",
+        "time": "15:00:00",
+        "url": "https://www.footballwebpages.co.uk/match/2026-2027/northern-premier-league--midlands-division/coleshill-town/st-ives-town/582421",
+        "title": "Coleshill Town v St Ives Town",
+        "listing": "3pm"
+      },
+      {
+        "id": "582435",
+        "date": "2026-12-19",
+        "time": "15:00:00",
+        "url": "https://www.footballwebpages.co.uk/match/2026-2027/northern-premier-league--midlands-division/loughborough-students/coleshill-town/582435",
+        "title": "Loughborough Students v Coleshill Town",
+        "listing": "3pm"
+      },
+      {
+        "id": "582443",
+        "date": "2026-12-26",
+        "time": "15:00:00",
+        "url": "https://www.footballwebpages.co.uk/match/2026-2027/northern-premier-league--midlands-division/coleshill-town/coventry-united/582443",
+        "title": "Coleshill Town v Coventry United",
+        "listing": "3pm"
+      },
+      {
+        "id": "582452",
+        "date": "2027-01-02",
+        "time": "15:00:00",
+        "url": "https://www.footballwebpages.co.uk/match/2026-2027/northern-premier-league--midlands-division/boldmere-st-michaels/coleshill-town/582452",
+        "title": "Boldmere St Michaels v Coleshill Town",
+        "listing": "3pm"
+      },
+      {
+        "id": "582463",
+        "date": "2027-01-09",
+        "time": "15:00:00",
+        "url": "https://www.footballwebpages.co.uk/match/2026-2027/northern-premier-league--midlands-division/coleshill-town/carlton-town/582463",
+        "title": "Coleshill Town v Carlton Town",
+        "listing": "3pm"
+      },
+      {
+        "id": "582480",
+        "date": "2027-01-16",
+        "time": "15:00:00",
+        "url": "https://www.footballwebpages.co.uk/match/2026-2027/northern-premier-league--midlands-division/long-eaton-united/coleshill-town/582480",
+        "title": "Long Eaton United v Coleshill Town",
+        "listing": "3pm"
+      },
+      {
+        "id": "582484",
+        "date": "2027-01-23",
+        "time": "15:00:00",
+        "url": "https://www.footballwebpages.co.uk/match/2026-2027/northern-premier-league--midlands-division/coleshill-town/mickleover/582484",
+        "title": "Coleshill Town v Mickleover",
+        "listing": "3pm"
+      },
+      {
+        "id": "582500",
+        "date": "2027-01-30",
+        "time": "15:00:00",
+        "url": "https://www.footballwebpages.co.uk/match/2026-2027/northern-premier-league--midlands-division/bourne-town/coleshill-town/582500",
+        "title": "Bourne Town v Coleshill Town",
+        "listing": "3pm"
+      },
+      {
+        "id": "582506",
+        "date": "2027-02-06",
+        "time": "15:00:00",
+        "url": "https://www.footballwebpages.co.uk/match/2026-2027/northern-premier-league--midlands-division/coleshill-town/boston-town/582506",
+        "title": "Coleshill Town v Boston Town",
+        "listing": "3pm"
+      },
+      {
+        "id": "582519",
+        "date": "2027-02-13",
+        "time": "15:00:00",
+        "url": "https://www.footballwebpages.co.uk/match/2026-2027/northern-premier-league--midlands-division/belper-town/coleshill-town/582519",
+        "title": "Belper Town v Coleshill Town",
+        "listing": "3pm"
+      },
+      {
+        "id": "582528",
+        "date": "2027-02-20",
+        "time": "15:00:00",
+        "url": "https://www.footballwebpages.co.uk/match/2026-2027/northern-premier-league--midlands-division/coleshill-town/grantham-town/582528",
+        "title": "Coleshill Town v Grantham Town",
+        "listing": "3pm"
+      },
+      {
+        "id": "582540",
+        "date": "2027-02-27",
+        "time": "15:00:00",
+        "url": "https://www.footballwebpages.co.uk/match/2026-2027/northern-premier-league--midlands-division/basford-united/coleshill-town/582540",
+        "title": "Basford United v Coleshill Town",
+        "listing": "3pm"
+      },
+      {
+        "id": "582552",
+        "date": "2027-03-06",
+        "time": "15:00:00",
+        "url": "https://www.footballwebpages.co.uk/match/2026-2027/northern-premier-league--midlands-division/coleshill-town/wellingborough-town/582552",
+        "title": "Coleshill Town v Wellingborough Town",
+        "listing": "3pm"
+      },
+      {
+        "id": "582568",
+        "date": "2027-03-13",
+        "time": "15:00:00",
+        "url": "https://www.footballwebpages.co.uk/match/2026-2027/northern-premier-league--midlands-division/shepshed-dynamo/coleshill-town/582568",
+        "title": "Shepshed Dynamo v Coleshill Town",
+        "listing": "3pm"
+      },
+      {
+        "id": "582580",
+        "date": "2027-03-20",
+        "time": "15:00:00",
+        "url": "https://www.footballwebpages.co.uk/match/2026-2027/northern-premier-league--midlands-division/rugby-borough/coleshill-town/582580",
+        "title": "Rugby Borough v Coleshill Town",
+        "listing": "3pm"
+      },
+      {
+        "id": "582586",
+        "date": "2027-03-27",
+        "time": "15:00:00",
+        "url": "https://www.footballwebpages.co.uk/match/2026-2027/northern-premier-league--midlands-division/coleshill-town/nuneaton-town/582586",
+        "title": "Coleshill Town v Nuneaton Town",
+        "listing": "3pm"
+      },
+      {
+        "id": "582598",
+        "date": "2027-03-29",
+        "time": "15:00:00",
+        "url": "https://www.footballwebpages.co.uk/match/2026-2027/northern-premier-league--midlands-division/coventry-united/coleshill-town/582598",
+        "title": "Coventry United v Coleshill Town",
+        "listing": "3pm"
+      },
+      {
+        "id": "582608",
+        "date": "2027-04-03",
+        "time": "15:00:00",
+        "url": "https://www.footballwebpages.co.uk/match/2026-2027/northern-premier-league--midlands-division/coleshill-town/loughborough-students/582608",
+        "title": "Coleshill Town v Loughborough Students",
+        "listing": "3pm"
+      },
+      {
+        "id": "582620",
+        "date": "2027-04-10",
+        "time": "15:00:00",
+        "url": "https://www.footballwebpages.co.uk/match/2026-2027/northern-premier-league--midlands-division/corby-town/coleshill-town/582620",
+        "title": "Corby Town v Coleshill Town",
+        "listing": "3pm"
+      },
+      {
+        "id": "582630",
+        "date": "2027-04-17",
+        "time": "15:00:00",
+        "url": "https://www.footballwebpages.co.uk/match/2026-2027/northern-premier-league--midlands-division/coleshill-town/barwell/582630",
+        "title": "Coleshill Town v Barwell",
+        "listing": "3pm"
+      }
+    ]
+  }
+}
