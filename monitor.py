@@ -4,6 +4,7 @@ import hashlib
 import json
 import os
 import re
+import unicodedata
 from datetime import datetime, timedelta, time
 from html.parser import HTMLParser
 from pathlib import Path
@@ -15,6 +16,24 @@ BASE = 'https://www.footballwebpages.co.uk/'
 FIXTURES = BASE + 'coleshill-town/fixtures-results'
 LONDON = ZoneInfo('Europe/London')
 STATE = Path('state.json')
+BRANDING = 'Live At Pack Meadow | @PackMeadow\nhttps://www.facebook.com/PackMeadow/\n#ColeshillTown'
+
+
+def brand_drafts(texts):
+    """Include both supplied social identities in every draft without dropping content."""
+    limit = 270 - len(BRANDING) - 2
+    result = []
+    for text in texts:
+        body = text.replace('\n#ColeshillTown', '').strip()
+        while len(body) > limit:
+            cut = body.rfind(' ', 0, limit + 1)
+            if cut < 1:
+                cut = limit
+            result.append(body[:cut].strip() + '\n\n' + BRANDING)
+            body = body[cut:].strip()
+        if body:
+            result.append(body + '\n\n' + BRANDING)
+    return result
 
 
 class Node:
@@ -137,7 +156,7 @@ def chunks(prefix, names):
     result, current = [], prefix
     for name in names:
         add = ('' if current == prefix or current.endswith('\n') else ', ') + name
-        if len(current + add + '\n#ColeshillTown') > 270:
+        if len(current + add) > 270 - len(BRANDING) - 2:
             result.append(current + '\n#ColeshillTown')
             current = 'Team news continued: ' + name
         else:
@@ -173,8 +192,30 @@ def drafts(data, previous):
         if not re.search(r'scores|replaced|cautioned|sent off|dismissed|half.time|full.time|kick.off|postponed|abandoned|penalt', event, re.I):
             continue
         event = re.sub(r"^(\d+(?:\+\d+)?')(?=\S)", r'\1 ', event)
-        label = '⚽ ' if 'scores' in event else ''
-        text = label + event
+        text = event
+        goal = re.match(r"^(\d+(?:\+\d+)?')\s+(.+?)\s+scores\b", event)
+        if goal:
+            scorer = normalize_player(goal.group(2))
+            our_players = {normalize_player(n) for n in data['lineups'][side]}
+            other_side = 'away' if side == 'home' else 'home'
+            their_players = {normalize_player(n) for n in data['lineups'][other_side]}
+            if 'own goal' in event.lower():
+                heading = '⚽ OWN GOAL UPDATE'
+            elif scorer in our_players:
+                heading = '⚽ GOAL, COLESHILL!'
+            elif scorer in their_players:
+                heading = '⚽ Goal for ' + data['teams'][other_side]['name']
+            else:
+                heading = '⚽ GOAL UPDATE'
+            text = heading + '\n' + event.rstrip('.') + '.'
+        elif re.match('half.time:', event, re.I):
+            text = 'HALF-TIME | ' + event.split(':', 1)[1].strip()
+        elif re.match('full.time:', event, re.I):
+            text = 'FULL-TIME | ' + event.split(':', 1)[1].strip()
+        elif ' replaced ' in event:
+            text = '🔄 SUBSTITUTION\n' + event.rstrip('.') + '.'
+        elif re.search('cautioned|sent off|dismissed', event, re.I):
+            text = 'MATCH UPDATE\n' + event.rstrip('.') + '.'
         if score and re.search('scores|replaced|cautioned|sent off|dismissed', event, re.I):
             text += '\nLatest score: ' + score
         text += '\n#ColeshillTown'
@@ -189,7 +230,7 @@ def drafts(data, previous):
         if score:
             text += '\nLatest score: ' + score
         output.append(text + '\n#ColeshillTown')
-    return output, {'events': data['events'], 'lineup': names, 'score': score}
+    return brand_drafts(output), {'events': data['events'], 'lineup': names, 'score': score}
 
 
 def github(method, path, body=None):
@@ -202,7 +243,46 @@ def github(method, path, body=None):
         return json.load(response)
 
 
-def deliver(fixture, texts, saved):
+def normalize_player(name):
+    name = re.sub(r'\s*\(C\)\s*$', '', name, flags=re.I)
+    return ' '.join(re.sub(r'[^a-z0-9]+', ' ', unicodedata.normalize('NFKD', name).encode('ascii', 'ignore').decode().lower()).split())
+
+
+def goal_graphic(text, data):
+    """Return an exact-matched graphic only for a Coleshill scorer, never an own goal."""
+    scorer = re.search(r"(?:^⚽\s+|^)(?:\d+(?:\+\d+)?')\s+(.+?)\s+scores\b", text, re.I | re.M)
+    if not scorer or 'own goal' in text.lower():
+        return None
+    name = normalize_player(scorer.group(1))
+    side = next((s for s, team in data['teams'].items() if team['name'] == 'Coleshill Town'), None)
+    roster = {normalize_player(n) for n in data['lineups'].get(side, [])}
+    if not side or name not in roster:
+        return None
+    manifest = Path(__file__).parent / 'graphics' / 'players.json'
+    if not manifest.exists():
+        return None
+    for player, asset in json.loads(manifest.read_text()).items():
+        if name in {normalize_player(n) for n in [player] + asset.get('aliases', [])}:
+            path = asset['file']
+            if not path.startswith('graphics/') or '..' in path.split('/') or not (manifest.parent.parent / path).is_file():
+                return None
+            return {'player': player, 'path': path}
+    return None
+
+
+def graphic_markdown(text, data, repo):
+    asset = goal_graphic(text, data)
+    if not asset:
+        return ''
+    url = f"https://raw.githubusercontent.com/{repo}/main/{asset['path']}"
+    return ('\n\n### Goal graphic — ' + asset['player'] + '\n\n'
+            '![' + asset['player'] + ' goal graphic](' + url + ')\n\n'
+            '[**Open full-size graphic**](' + url + ')\n\n'
+            'On iPhone: open the graphic, touch and hold it, then save it to Photos. '
+            'Use **Open in X** above and attach the saved graphic before posting.')
+
+
+def deliver(fixture, texts, saved, data):
     repo, owner = os.environ['GITHUB_REPOSITORY'], os.environ['GITHUB_REPOSITORY_OWNER']
     if not saved.get('issue'):
         # Recover an existing match issue after a failed state commit.
@@ -232,7 +312,8 @@ def deliver(fixture, texts, saved):
             continue
         url = 'https://twitter.com/intent/tweet?text=' + quote(text, safe='')
         github('POST', path, {'body': marker + '\n\n@' + owner + ' — new match draft:\n\n'
-               + text + '\n\n[**Open in X**](' + url + ') · [Check source](' + fixture['url'] + ')'})
+               + text + '\n\n[**Open in X**](' + url + ') · [Check source](' + fixture['url'] + ')'
+               + graphic_markdown(text, data, repo)})
 
 
 def run(now, dry_run=False):
@@ -279,7 +360,7 @@ def run(now, dry_run=False):
             if dry_run:
                 print(json.dumps(texts, ensure_ascii=False, indent=2))
             else:
-                deliver(fixture, texts, saved)
+                deliver(fixture, texts, saved, data)
             count += len(texts)
         saved.update(snapshot)
     if not dry_run:

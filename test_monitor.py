@@ -1,6 +1,6 @@
 import unittest
 from copy import deepcopy
-from monitor import chunks, drafts, fixtures, match, parse_time
+from monitor import chunks, drafts, fixtures, match, parse_time, goal_graphic, graphic_markdown, brand_drafts
 
 
 class MonitorTests(unittest.TestCase):
@@ -63,6 +63,66 @@ class MonitorTests(unittest.TestCase):
     def test_reject_missing_or_wrong_match(self):
         with self.assertRaises(ValueError):
             match('<html>Server error</html>')
+
+    def test_coleshill_scorer_has_correct_graphic(self):
+        data = self.sample()
+        data['lineups']['home'] = ['Bassit Mandey']
+        text = "⚽ 12' Bassit Mandey scores\nLatest score: Coleshill Town 1-0 Visitors"
+        self.assertEqual(goal_graphic(text, data)['path'], 'graphics/bassit-mandey.jpg')
+        self.assertIn('raw.githubusercontent.com/owner/repo/main/graphics/bassit-mandey.jpg', graphic_markdown(text, data, 'owner/repo'))
+
+    def test_opposition_scorer_does_not_get_our_graphic(self):
+        data = self.sample()
+        data['lineups']['away'] = ['Bassit Mandey']
+        self.assertIsNone(goal_graphic("⚽ 12' Bassit Mandey scores", data))
+
+    def test_own_goals_and_unknown_scorers_do_not_get_graphics(self):
+        data = self.sample()
+        data['lineups']['home'] = ['Bassit Mandey', 'New Player']
+        self.assertIsNone(goal_graphic("⚽ 12' Bassit Mandey scores an own goal", data))
+        self.assertIsNone(goal_graphic("⚽ 12' New Player scores", data))
+
+    def test_known_full_name_alias_and_captain_suffix(self):
+        data = self.sample()
+        data['lineups']['home'] = ['Benjamin Usher-Shipway (C)']
+        self.assertEqual(goal_graphic("⚽ 12' Benjamin Usher-Shipway scores", data)['player'], 'Ben Usher-Shipway')
+
+    def test_away_coleshill_scorer(self):
+        data = self.sample()
+        data['teams']['home']['name'] = 'Visitors'
+        data['teams']['away']['name'] = 'Coleshill Town'
+        data['lineups']['away'] = ['Daniel Gyasi']
+        self.assertEqual(goal_graphic("⚽ 90+2' Daniel Gyasi scores", data)['path'], 'graphics/daniel-gyasi.jpg')
+
+    def test_every_draft_has_pack_meadow_branding(self):
+        texts, _ = drafts(self.sample(), {})
+        self.assertTrue(texts)
+        for text in texts:
+            self.assertIn('Live At Pack Meadow | @PackMeadow', text)
+            self.assertIn('https://www.facebook.com/PackMeadow/', text)
+            self.assertEqual(text.count('#ColeshillTown'), 1)
+            self.assertLessEqual(len(text), 270)
+
+    def test_long_draft_keeps_information_and_branding(self):
+        words = ['Player' + str(i) for i in range(70)]
+        result = brand_drafts([' '.join(words) + '\n#ColeshillTown'])
+        self.assertGreater(len(result), 1)
+        for word in words:
+            self.assertIn(word, '\n'.join(result))
+        self.assertTrue(all(len(text) <= 270 for text in result))
+
+    def test_goal_tone_and_graphics_survive_branding(self):
+        data = self.sample()
+        data['lineups']['home'] = ['Bassit Mandey']
+        data['lineups']['away'] = ['Away Scorer']
+        data['events'] = ["12'Bassit Mandey scores", "20'Away Scorer scores"]
+        texts, _ = drafts(data, {})
+        ours = next(t for t in texts if 'Bassit Mandey scores' in t)
+        theirs = next(t for t in texts if 'Away Scorer scores' in t)
+        self.assertIn('GOAL, COLESHILL!', ours)
+        self.assertIn('Goal for Visitors', theirs)
+        self.assertNotIn('GOAL, COLESHILL!', theirs)
+        self.assertEqual(goal_graphic(ours, data)['player'], 'Bassit Mandey')
 
 
 if __name__ == '__main__':
