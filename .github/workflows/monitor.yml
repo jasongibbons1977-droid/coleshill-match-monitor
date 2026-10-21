@@ -23,6 +23,9 @@ jobs:
   checks:
     runs-on: ubuntu-latest
     timeout-minutes: 4
+    permissions:
+      contents: read
+      issues: write
     steps:
       - uses: actions/checkout@v4
       - name: Test event handling and deduplication
@@ -30,6 +33,36 @@ jobs:
       - name: Verify live source access
         if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
         run: python3 monitor.py --check-source >> "$GITHUB_STEP_SUMMARY"
+      - name: Send one setup notification with a sample X link
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import os
+          from urllib.parse import quote
+          from monitor import github
+          repo = os.environ['GITHUB_REPOSITORY']
+          owner = os.environ['GITHUB_REPOSITORY_OWNER']
+          marker = '<!-- coleshill-monitor-setup-test -->'
+          issues = github('GET', f'repos/{repo}/issues?state=all&per_page=100')
+          if not any(marker in (i.get('body') or '') for i in issues):
+              text = 'TEST ONLY — Coleshill Town match update notifications are being tested. This is not a live match update.'
+              link = 'https://twitter.com/intent/tweet?text=' + quote(text, safe='')
+              issue = github('POST', f'repos/{repo}/issues', {
+                  'title': 'Setup test — iPhone notifications and X drafts',
+                  'assignees': [owner],
+                  'body': marker + '\n\n@' + owner + ' — the hosted source check and parser tests passed. '
+                          'This is a notification test, not a live match update.\n\n'
+                          '[Open sample draft in X](' + link + ')\n\n'
+                          'You can open the sample and discard it without posting. '
+                          'Real match drafts will have the same kind of link. '
+                          'If no push notification arrived, enable mentions/assignments in the GitHub iPhone app and allow notifications in iPhone Settings. '
+                          'On this repository choose Watch → All Activity.'})
+              print('Setup test:', issue['html_url'])
+          else:
+              print('Setup notification already sent; not repeating it.')
+          PY
 
   monitor:
     if: github.event_name != 'push'
