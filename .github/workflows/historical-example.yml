@@ -1,0 +1,50 @@
+name: Historical notification example
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/historical-example.yml
+permissions:
+  contents: read
+  issues: write
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify historical result and send example
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import os
+          from urllib.parse import quote
+          from monitor import github, get, match
+          source = 'https://www.footballwebpages.co.uk/match/2026-2027/northern-premier-league--midlands-division/coleshill-town/basford-united/582318'
+          data = match(get(source))
+          assert data['teams']['home'] == {'name': 'Coleshill Town', 'score': '4'}
+          assert data['teams']['away'] == {'name': 'Basford United', 'score': '2'}
+          assert any("1'Bassit Mandey scores" == e or "1' Bassit Mandey scores" == e for e in data['events'])
+          repo = os.environ['GITHUB_REPOSITORY']
+          owner = os.environ['GITHUB_REPOSITORY_OWNER']
+          marker = '<!-- historical-example-basford-2026-10-10 -->'
+          issues = github('GET', f'repos/{repo}/issues?state=all&per_page=100')
+          if any(marker in (i.get('body') or '') for i in issues):
+              print('Historical example already sent.')
+          else:
+              text = "FROM THE ARCHIVE | 10 Oct 2026\n\n⚽ Bassit Mandey opened the scoring after just 1 minute as Coleshill Town beat Basford United 4-2!\n\nLive At Pack Meadow | @PackMeadow\nhttps://www.facebook.com/PackMeadow/\n#ColeshillTown"
+              assert len(text) <= 270
+              link = 'https://twitter.com/intent/tweet?text=' + quote(text, safe='')
+              graphic = f'https://raw.githubusercontent.com/{repo}/main/graphics/bassit-mandey.jpg'
+              body = (marker + '\n\n@' + owner + ' — your requested historical notification example. '
+                      '**This is from 10 October 2026, not a live goal.** The tweet is labelled FROM THE ARCHIVE.\n\n'
+                      + text + '\n\n[**Open in X**](' + link + ') · [Match source](' + source + ')\n\n'
+                      '![Bassit Mandey goal graphic](' + graphic + ')\n\n'
+                      '[**Open full-size graphic**](' + graphic + ')\n\n'
+                      'Save the image to Photos, open the X draft and attach the saved image before posting.')
+              issue = github('POST', f'repos/{repo}/issues', {
+                  'title': 'Historical example — Coleshill 4-2 Basford | 10 Oct 2026',
+                  'assignees': [owner], 'body': body})
+              print(issue['html_url'])
+          PY
