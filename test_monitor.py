@@ -99,7 +99,7 @@ class MonitorTests(unittest.TestCase):
         self.assertTrue(texts)
         for text in texts:
             self.assertIn('Live At Pack Meadow | @PackMeadow', text)
-            self.assertIn('https://www.facebook.com/PackMeadow/', text)
+            self.assertNotIn('facebook.com', text)
             self.assertEqual(text.count('#ColeshillTown'), 1)
             self.assertLessEqual(len(text), 270)
 

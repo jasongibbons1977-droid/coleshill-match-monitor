@@ -16,11 +16,11 @@ BASE = 'https://www.footballwebpages.co.uk/'
 FIXTURES = BASE + 'coleshill-town/fixtures-results'
 LONDON = ZoneInfo('Europe/London')
 STATE = Path('state.json')
-BRANDING = 'Live At Pack Meadow | @PackMeadow\nhttps://www.facebook.com/PackMeadow/\n#ColeshillTown'
+BRANDING = 'Live At Pack Meadow | @PackMeadow\n#ColeshillTown'
 
 
 def brand_drafts(texts):
-    """Include both supplied social identities in every draft without dropping content."""
+    """Include Pack Meadow X branding in every draft without dropping content."""
     limit = 270 - len(BRANDING) - 2
     result = []
     for text in texts:

@@ -33,7 +33,7 @@ jobs:
           if any(marker in (i.get('body') or '') for i in issues):
               print('Historical example already sent.')
           else:
-              text = "FROM THE ARCHIVE | 10 Oct 2026\n\n⚽ Bassit Mandey opened the scoring after just 1 minute as Coleshill Town beat Basford United 4-2!\n\nLive At Pack Meadow | @PackMeadow\nhttps://www.facebook.com/PackMeadow/\n#ColeshillTown"
+              text = "FROM THE ARCHIVE | 10 Oct 2026\n\n⚽ Bassit Mandey opened the scoring after just 1 minute as Coleshill Town beat Basford United 4-2!\n\nLive At Pack Meadow | @PackMeadow\n#ColeshillTown"
               assert len(text) <= 270
               link = 'https://twitter.com/intent/tweet?text=' + quote(text, safe='')
               graphic = f'https://raw.githubusercontent.com/{repo}/main/graphics/bassit-mandey.jpg'

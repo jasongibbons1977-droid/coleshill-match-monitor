@@ -2,7 +2,7 @@
 
 Free hosted match checks with ready-to-post X drafts. Your computer and iPhone can be switched off while checks run. Nothing is posted to X automatically, and no X API key or paid AI service is used.
 
-Every match tweet draft carries **Live At Pack Meadow | @PackMeadow**, the Pack Meadow Facebook link and `#ColeshillTown`. This is the coverage brand on both home and away updates. Long drafts are split to retain the information and branding within the character limit.
+Every match tweet draft carries **Live At Pack Meadow | @PackMeadow**, the Pack Meadow X mention and `#ColeshillTown`. This is the coverage brand on both home and away updates. Long drafts are split to retain the information and branding within the character limit.
 
 Copy uses consistent matchday formatting: an energetic **GOAL, COLESHILL!** for a verified Coleshill scorer, neutral opposition goal notices, clear HALF-TIME/FULL-TIME headings and restrained substitution/discipline updates. No invented descriptions of finishes, crowd reactions or match dominance are added.
 
@@ -53,3 +53,5 @@ python3 monitor.py --dry-run
 ```
 
 `--dry-run` does not post comments or save state. Normal execution needs the automatically supplied `GH_TOKEN`, `GITHUB_REPOSITORY` and `GITHUB_REPOSITORY_OWNER` environment variables from GitHub Actions. Never put personal access tokens or passwords in repository files.
+
+Facebook links are omitted from tweet drafts. Goal pictures are attached separately in X; no image link consumes tweet text space. Drafts stay within 270 characters.
