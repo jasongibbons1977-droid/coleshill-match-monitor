@@ -3,10 +3,12 @@
     "582350": {
       "kickoff": "15:00:00",
       "events": [
+        "Half-time: Wellingborough Town 3-3 Coleshill Town",
         "1'Benjamin Usher-Shipway scores",
         "7'George Barnell scores",
         "12'William Marshall scores",
-        "28'Charlie Manners scores"
+        "28'Charlie Manners scores",
+        "43'George Ball scores"
       ],
       "lineup": [
         "Cameron Belford",
@@ -26,7 +28,7 @@
         "Callum Coyle",
         "Gio Dainty"
       ],
-      "score": "Wellingborough Town 1-3 Coleshill Town",
+      "score": "Wellingborough Town 2-3 Coleshill Town",
       "issue": 4,
       "matchday": true
     }
