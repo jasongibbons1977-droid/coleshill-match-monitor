@@ -65,7 +65,7 @@ jobs:
           PY
 
   monitor:
-    if: github.event_name != 'push'
+    if: github.event_name != 'push' || github.ref == 'refs/heads/main'
     needs: checks
     runs-on: ubuntu-latest
     timeout-minutes: 4

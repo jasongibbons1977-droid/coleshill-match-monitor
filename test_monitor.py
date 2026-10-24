@@ -1,9 +1,21 @@
 import unittest
+from datetime import datetime
 from copy import deepcopy
-from monitor import chunks, drafts, fixtures, match, parse_time, goal_graphic, graphic_markdown, brand_drafts
+from monitor import chunks, drafts, fixtures, match, parse_time, goal_graphic, graphic_markdown, brand_drafts, matchday_opener, LONDON
 
 
 class MonitorTests(unittest.TestCase):
+    def test_matchday_opener_before_lineups_and_no_repeat(self):
+        data = {'teams': {'home': {'name': 'Wellingborough Town', 'score': None}, 'away': {'name': 'Coleshill Town', 'score': None}}, 'events': []}
+        now = datetime(2026, 10, 24, 14, 20, tzinfo=LONDON)
+        text = matchday_opener(data, '15:00:00', now, {})
+        self.assertEqual(len(text), 1)
+        self.assertIn('Kick-off: 3pm UK', text[0])
+        self.assertIn('@PackMeadow', text[0])
+        self.assertLessEqual(len(text[0]), 270)
+        self.assertEqual(matchday_opener(data, '15:00:00', now, {'matchday': True}), [])
+        self.assertEqual(matchday_opener(data, '15:00:00', now.replace(hour=16), {}), [])
+
     def sample(self):
         return {'teams': {'home': {'name': 'Coleshill Town', 'score': '2'},
                           'away': {'name': 'Visitors', 'score': '1'}},

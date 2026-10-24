@@ -316,6 +316,19 @@ def deliver(fixture, texts, saved, data):
                + graphic_markdown(text, data, repo)})
 
 
+def matchday_opener(data, kickoff, now, saved):
+    if saved.get('matchday') or not kickoff or data['events'] or any(t['score'] is not None for t in data['teams'].values()):
+        return []
+    ko = datetime.combine(now.date(), time.fromisoformat(kickoff), LONDON)
+    if now > ko:
+        return []
+    home, away = data['teams']['home']['name'], data['teams']['away']['name']
+    intro = 'The Colemen are on the road!' if away == 'Coleshill Town' else 'Home matchday for the Colemen!'
+    hour = ko.hour % 12 or 12
+    clock = str(hour) + (f':{ko.minute:02d}' if ko.minute else '') + ('pm' if ko.hour >= 12 else 'am')
+    return brand_drafts([f'MATCHDAY 💙🤍\n{intro}\n\n{home} v {away}\nKick-off: {clock} UK\n\nTeam news and match updates to follow.'])
+
+
 def run(now, dry_run=False):
     state = json.loads(STATE.read_text()) if STATE.exists() else {'matches': {}}
     state.setdefault('matches', {})
@@ -356,6 +369,10 @@ def run(now, dry_run=False):
         if re.search(r'\b(?:P-P|postponed)\b', fixture.get('listing', ''), re.I):
             data['events'].append('Postponed: ' + fixture['title'])
         texts, snapshot = drafts(data, saved)
+        opener = matchday_opener(data, kickoff, now, saved)
+        if opener:
+            texts = opener + texts
+            snapshot['matchday'] = True
         if texts:
             if dry_run:
                 print(json.dumps(texts, ensure_ascii=False, indent=2))
