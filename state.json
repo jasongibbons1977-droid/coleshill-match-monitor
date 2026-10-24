@@ -3,7 +3,24 @@
     "582350": {
       "kickoff": "15:00:00",
       "events": [],
-      "lineup": [],
+      "lineup": [
+        "Cameron Belford",
+        "Callum Witts",
+        "Harry Sweeney",
+        "Lewis Allison",
+        "George Cleet",
+        "Taylor Carter-Byrne (C)",
+        "Daniel Gyasi",
+        "Bassit Mandey",
+        "Charlie Manners",
+        "Benjamin Usher-Shipway",
+        "William Marshall",
+        "Tristan Dunkley",
+        "Callum Griffin",
+        "Harvey Watts",
+        "Callum Coyle",
+        "Gio Dainty"
+      ],
       "score": null,
       "issue": 4,
       "matchday": true
