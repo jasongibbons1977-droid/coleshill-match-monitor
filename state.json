@@ -4,7 +4,9 @@
       "kickoff": "15:00:00",
       "events": [],
       "lineup": [],
-      "score": null
+      "score": null,
+      "issue": 4,
+      "matchday": true
     }
   },
   "fixtures": {
