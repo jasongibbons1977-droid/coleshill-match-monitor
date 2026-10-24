@@ -2,7 +2,9 @@
   "matches": {
     "582350": {
       "kickoff": "15:00:00",
-      "events": [],
+      "events": [
+        "1'Benjamin Usher-Shipway scores"
+      ],
       "lineup": [
         "Cameron Belford",
         "Callum Witts",
@@ -21,7 +23,7 @@
         "Callum Coyle",
         "Gio Dainty"
       ],
-      "score": null,
+      "score": "Wellingborough Town 0-1 Coleshill Town",
       "issue": 4,
       "matchday": true
     }
