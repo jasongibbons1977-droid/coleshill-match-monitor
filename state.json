@@ -8,7 +8,10 @@
         "7'George Barnell scores",
         "12'William Marshall scores",
         "28'Charlie Manners scores",
-        "43'George Ball scores"
+        "43'George Ball scores",
+        "46'Lloyd Buckby replaced George Barnell",
+        "47'Ethan Johnston replaced George Ball",
+        "55'Ethan Johnston scores"
       ],
       "lineup": [
         "Cameron Belford",
@@ -28,7 +31,7 @@
         "Callum Coyle",
         "Gio Dainty"
       ],
-      "score": "Wellingborough Town 2-3 Coleshill Town",
+      "score": "Wellingborough Town 3-3 Coleshill Town",
       "issue": 4,
       "matchday": true
     }
