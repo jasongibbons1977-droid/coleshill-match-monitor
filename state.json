@@ -11,7 +11,14 @@
         "43'George Ball scores",
         "46'Lloyd Buckby replaced George Barnell",
         "47'Ethan Johnston replaced George Ball",
-        "55'Ethan Johnston scores"
+        "55'Ethan Johnston scores",
+        "65'Charlie Green scores",
+        "68'Callum Griffin replaced Benjamin Usher-Shipway",
+        "70'Sam Warburton replaced Neo Richard-Noel",
+        "80'Charlie Manners scores (pen)",
+        "84'Zayn Hakeem scores",
+        "88'Callum Coyle replaced Daniel Gyasi",
+        "88'Tristan Dunkley replaced William Marshall"
       ],
       "lineup": [
         "Cameron Belford",
@@ -31,13 +38,13 @@
         "Callum Coyle",
         "Gio Dainty"
       ],
-      "score": "Wellingborough Town 3-3 Coleshill Town",
+      "score": "Wellingborough Town 5-4 Coleshill Town",
       "issue": 4,
       "matchday": true
     }
   },
   "fixtures": {
-    "at": "2026-10-24T15:31:36.501307+01:00",
+    "at": "2026-10-24T16:48:57.378154+01:00",
     "date": "2026-10-24",
     "rows": [
       {
@@ -181,8 +188,8 @@
         "date": "2026-10-24",
         "time": null,
         "url": "https://www.footballwebpages.co.uk/match/2026-2027/northern-premier-league--midlands-division/wellingborough-town/coleshill-town/582350",
-        "title": "Wellingborough Town 1-3 Coleshill Town",
-        "listing": "3 - 1"
+        "title": "Wellingborough Town 5-4 Coleshill Town",
+        "listing": "(3)4 - 5(3)"
       },
       {
         "id": "595812",
