@@ -49,8 +49,25 @@
       "kickoff": "19:45:00",
       "issue": 5,
       "events": [],
-      "lineup": [],
-      "score": null,
+      "lineup": [
+        "Cameron Belford",
+        "Leon Machisa",
+        "Harry Sweeney",
+        "Blake Kindred",
+        "George Cleet",
+        "Taylor Carter-Byrne (C)",
+        "Daniel Gyasi",
+        "Charlie Manners",
+        "Tristan Dunkley",
+        "Callum Griffin",
+        "William Marshall",
+        "Mason Rees",
+        "Alex Graham",
+        "Bassit Mandey",
+        "Callum Coyle",
+        "Gio Dainty"
+      ],
+      "score": "Chasetown 0-0 Coleshill Town",
       "matchday": true
     }
   },
