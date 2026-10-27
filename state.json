@@ -46,7 +46,12 @@
       "matchday": true
     },
     "595812": {
-      "kickoff": "19:45:00"
+      "kickoff": "19:45:00",
+      "issue": 5,
+      "events": [],
+      "lineup": [],
+      "score": null,
+      "matchday": true
     }
   },
   "fixtures": {
