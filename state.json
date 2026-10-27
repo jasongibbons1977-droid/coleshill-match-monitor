@@ -48,7 +48,12 @@
     "595812": {
       "kickoff": "19:45:00",
       "issue": 5,
-      "events": [],
+      "events": [
+        "Half-time: Chasetown 0-0 Coleshill Town",
+        "25'Callum Coyle replaced Charlie Manners",
+        "38'Daniel Gyasi cautioned",
+        "42'Callum Coyle cautioned"
+      ],
       "lineup": [
         "Cameron Belford",
         "Leon Machisa",
@@ -72,7 +77,7 @@
     }
   },
   "fixtures": {
-    "at": "2026-10-27T19:47:44.344469+00:00",
+    "at": "2026-10-27T20:56:18.898366+00:00",
     "date": "2026-10-27",
     "rows": [
       {
@@ -222,10 +227,10 @@
       {
         "id": "595812",
         "date": "2026-10-27",
-        "time": "19:45:00",
+        "time": null,
         "url": "https://www.footballwebpages.co.uk/match/2026-2027/walsall-senior-cup/chasetown/coleshill-town/595812",
-        "title": "Chasetown v Coleshill Town",
-        "listing": "7.45pm"
+        "title": "Chasetown 0-0 Coleshill Town",
+        "listing": "(0)0 - 0(0)"
       },
       {
         "id": "582351",
