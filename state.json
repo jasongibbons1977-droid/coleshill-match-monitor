@@ -44,11 +44,14 @@
       "score": "Wellingborough Town 5-4 Coleshill Town",
       "issue": 4,
       "matchday": true
+    },
+    "595812": {
+      "kickoff": "19:45:00"
     }
   },
   "fixtures": {
-    "at": "2026-10-26T22:41:08.427416+00:00",
-    "date": "2026-10-26",
+    "at": "2026-10-27T00:02:32.783139+00:00",
+    "date": "2026-10-27",
     "rows": [
       {
         "id": "582178",
