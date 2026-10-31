@@ -94,7 +94,14 @@
       "events": [
         "Half-time: Barwell 0-1 Coleshill Town",
         "3'Taylor Carter-Byrne scores",
-        "22'Macauley King cautioned"
+        "22'Macauley King cautioned",
+        "46'Leke Shodunke replaced Sonny Singh",
+        "65'Luke Benbow scores",
+        "66'Bassit Mandey replaced Benjamin Usher-Shipway",
+        "73'Bassit Mandey sent off",
+        "74'Charlie Dowd cautioned",
+        "75'Callum Coyle replaced Callum Griffin",
+        "75'Charlie Manners replaced William Marshall"
       ],
       "lineup": [
         "Cameron Belford",
@@ -114,12 +121,12 @@
         "Charlie Manners",
         "Leon Machisa"
       ],
-      "score": "Barwell 0-1 Coleshill Town",
+      "score": "Barwell 1-1 Coleshill Town",
       "matchday": true
     }
   },
   "fixtures": {
-    "at": "2026-10-31T15:30:03.369030+00:00",
+    "at": "2026-10-31T16:35:39.052486+00:00",
     "date": "2026-10-31",
     "rows": [
       {
@@ -279,8 +286,8 @@
         "date": "2026-10-31",
         "time": null,
         "url": "https://www.footballwebpages.co.uk/match/2026-2027/northern-premier-league--midlands-division/barwell/coleshill-town/582351",
-        "title": "Barwell 0-1 Coleshill Town",
-        "listing": "1 - 0"
+        "title": "Barwell 1-1 Coleshill Town",
+        "listing": "(1)1 - 1(0)"
       },
       {
         "id": "582366",
