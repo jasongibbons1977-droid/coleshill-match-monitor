@@ -87,11 +87,36 @@
       ],
       "score": "Chasetown 1-1 Coleshill Town",
       "matchday": true
+    },
+    "582351": {
+      "kickoff": "15:00:00",
+      "issue": 6,
+      "events": [],
+      "lineup": [
+        "Cameron Belford",
+        "Callum Witts",
+        "Brad Burton",
+        "Lewis Allison",
+        "George Cleet",
+        "Taylor Carter-Byrne (C)",
+        "Daniel Gyasi",
+        "Callum Griffin",
+        "Marvellous Onabirekhanlen",
+        "Benjamin Usher-Shipway",
+        "William Marshall",
+        "Tristan Dunkley",
+        "Bassit Mandey",
+        "Callum Coyle",
+        "Charlie Manners",
+        "Leon Machisa"
+      ],
+      "score": null,
+      "matchday": true
     }
   },
   "fixtures": {
-    "at": "2026-10-30T23:28:36.334223+00:00",
-    "date": "2026-10-30",
+    "at": "2026-10-31T14:27:53.123282+00:00",
+    "date": "2026-10-31",
     "rows": [
       {
         "id": "582178",
