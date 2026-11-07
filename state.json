@@ -129,11 +129,19 @@
       ],
       "score": "Barwell 1-1 Coleshill Town",
       "matchday": true
+    },
+    "582366": {
+      "kickoff": "15:00:00",
+      "issue": 7,
+      "events": [],
+      "lineup": [],
+      "score": null,
+      "matchday": true
     }
   },
   "fixtures": {
-    "at": "2026-11-06T23:52:07.010746+00:00",
-    "date": "2026-11-06",
+    "at": "2026-11-07T14:15:06.998236+00:00",
+    "date": "2026-11-07",
     "rows": [
       {
         "id": "582178",
