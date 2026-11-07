@@ -152,12 +152,12 @@
         "William Marshall",
         "Callum Witts"
       ],
-      "score": null,
+      "score": "Coleshill Town 0-0 Corby Town",
       "matchday": true
     }
   },
   "fixtures": {
-    "at": "2026-11-07T14:15:06.998236+00:00",
+    "at": "2026-11-07T15:23:46.093717+00:00",
     "date": "2026-11-07",
     "rows": [
       {
@@ -323,10 +323,10 @@
       {
         "id": "582366",
         "date": "2026-11-07",
-        "time": "15:00:00",
+        "time": null,
         "url": "https://www.footballwebpages.co.uk/match/2026-2027/northern-premier-league-midlands-division/coleshill-town/corby-town/582366",
-        "title": "Coleshill Town v Corby Town",
-        "listing": "3pm"
+        "title": "Coleshill Town 0-0 Corby Town",
+        "listing": "0 - 0"
       },
       {
         "id": "582375",
