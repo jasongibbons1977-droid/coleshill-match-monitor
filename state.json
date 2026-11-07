@@ -134,7 +134,24 @@
       "kickoff": "15:00:00",
       "issue": 7,
       "events": [],
-      "lineup": [],
+      "lineup": [
+        "Cameron Belford",
+        "Brad Burton",
+        "Harry Sweeney",
+        "Lewis Allison",
+        "George Cleet",
+        "Taylor Carter-Byrne (C)",
+        "Daniel Gyasi",
+        "Callum Coyle",
+        "Marvellous Onabirekhanlen",
+        "Benjamin Usher-Shipway",
+        "Charlie Manners",
+        "Tristan Dunkley",
+        "Callum Griffin",
+        "Leon Machisa",
+        "William Marshall",
+        "Callum Witts"
+      ],
       "score": null,
       "matchday": true
     }
