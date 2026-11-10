@@ -156,11 +156,16 @@
       "matchday": true
     },
     "596732": {
-      "kickoff": "19:00:00"
+      "kickoff": "19:00:00",
+      "issue": 8,
+      "events": [],
+      "lineup": [],
+      "score": null,
+      "matchday": true
     }
   },
   "fixtures": {
-    "at": "2026-11-10T16:47:23.753088+00:00",
+    "at": "2026-11-10T18:14:56.343495+00:00",
     "date": "2026-11-10",
     "rows": [
       {
