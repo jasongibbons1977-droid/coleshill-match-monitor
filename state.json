@@ -167,11 +167,21 @@
       "kickoff": "15:00:00",
       "issue": 9,
       "events": [
+        "Full-time: Coleshill Town 2-2 Long Eaton United",
         "Half-time: Coleshill Town 0-1 Long Eaton United",
         "31'Alexander William Marshall scores",
         "43'Terry Hawkridge cautioned",
         "48'Marvellous Onabirekhanlen scores",
-        "54'Marvellous Onabirekhanlen cautioned"
+        "54'Marvellous Onabirekhanlen cautioned",
+        "57'Daniel Gyasi scores (pen)",
+        "69'Dorian Sulkowski replaced Terry Hawkridge",
+        "69'Tyler Dacres replaced Jayden Chambers",
+        "79'William Marshall replaced Benjamin Usher-Shipway",
+        "80'Callum Griffin cautioned",
+        "81'Pierre Ngolo replaced Yerim Zoko",
+        "86'Tyler Dacres scores",
+        "90'Brad Burton cautioned",
+        "90'Dorian Sulkowski cautioned"
       ],
       "lineup": [
         "Cameron Belford",
@@ -191,12 +201,12 @@
         "Callum Witts",
         "Gio Dainty"
       ],
-      "score": "Coleshill Town 1-1 Long Eaton United",
+      "score": "Coleshill Town 2-2 Long Eaton United",
       "matchday": true
     }
   },
   "fixtures": {
-    "at": "2026-11-14T15:31:40.911373+00:00",
+    "at": "2026-11-14T16:49:19.283214+00:00",
     "date": "2026-11-14",
     "rows": [
       {
@@ -380,8 +390,8 @@
         "date": "2026-11-14",
         "time": null,
         "url": "https://www.footballwebpages.co.uk/match/2026-2027/northern-premier-league-midlands-division/coleshill-town/long-eaton-united/582375",
-        "title": "Coleshill Town 0-1 Long Eaton United",
-        "listing": "0 - 1"
+        "title": "Coleshill Town 2-2 Long Eaton United",
+        "listing": "(0)2 - 2(1)"
       },
       {
         "id": "582386",
