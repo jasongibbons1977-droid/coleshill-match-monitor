@@ -167,7 +167,11 @@
       "kickoff": "15:00:00",
       "issue": 9,
       "events": [
-        "31'Alexander William Marshall scores"
+        "Half-time: Coleshill Town 0-1 Long Eaton United",
+        "31'Alexander William Marshall scores",
+        "43'Terry Hawkridge cautioned",
+        "48'Marvellous Onabirekhanlen scores",
+        "54'Marvellous Onabirekhanlen cautioned"
       ],
       "lineup": [
         "Cameron Belford",
@@ -187,7 +191,7 @@
         "Callum Witts",
         "Gio Dainty"
       ],
-      "score": "Coleshill Town 0-1 Long Eaton United",
+      "score": "Coleshill Town 1-1 Long Eaton United",
       "matchday": true
     }
   },
