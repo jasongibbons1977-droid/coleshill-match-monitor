@@ -166,7 +166,9 @@
     "582375": {
       "kickoff": "15:00:00",
       "issue": 9,
-      "events": [],
+      "events": [
+        "31'Alexander William Marshall scores"
+      ],
       "lineup": [
         "Cameron Belford",
         "Brad Burton",
@@ -185,12 +187,12 @@
         "Callum Witts",
         "Gio Dainty"
       ],
-      "score": null,
+      "score": "Coleshill Town 0-1 Long Eaton United",
       "matchday": true
     }
   },
   "fixtures": {
-    "at": "2026-11-14T14:21:40.325568+00:00",
+    "at": "2026-11-14T15:31:40.911373+00:00",
     "date": "2026-11-14",
     "rows": [
       {
@@ -372,10 +374,10 @@
       {
         "id": "582375",
         "date": "2026-11-14",
-        "time": "15:00:00",
+        "time": null,
         "url": "https://www.footballwebpages.co.uk/match/2026-2027/northern-premier-league-midlands-division/coleshill-town/long-eaton-united/582375",
-        "title": "Coleshill Town v Long Eaton United",
-        "listing": "3pm"
+        "title": "Coleshill Town 0-1 Long Eaton United",
+        "listing": "0 - 1"
       },
       {
         "id": "582386",
